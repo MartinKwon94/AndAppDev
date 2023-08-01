@@ -9,10 +9,10 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupactivity)
 
-//        val button2 = findViewById<Button>(R.id.button2)
-//        button2.setOnClickListener{
-//            finish()
-//        }
+        val button2 = findViewById<Button>(R.id.button3)
+        button2.setOnClickListener{
+            finish()
+        }
 
     }
 }

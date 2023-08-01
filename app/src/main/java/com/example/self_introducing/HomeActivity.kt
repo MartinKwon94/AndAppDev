@@ -9,9 +9,9 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.homeactivity)
 
-        val button = findViewById<Button>(R.id.button)
+        val button = findViewById<Button>(R.id.button4)
         button.setOnClickListener {
-            finish()
+            SignInActivity()
         }
     }
 }
