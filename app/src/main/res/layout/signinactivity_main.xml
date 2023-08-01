@@ -28,7 +28,9 @@
         android:layout_marginBottom="56dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:text="비밀번호를 입력하세요."
         android:textColor="#808080"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -52,6 +54,8 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:text="아이디를 입력하세요."
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
