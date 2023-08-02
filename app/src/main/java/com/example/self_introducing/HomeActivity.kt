@@ -1,5 +1,6 @@
 package com.example.self_introducing
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +12,9 @@ class HomeActivity : AppCompatActivity() {
 
         val button = findViewById<Button>(R.id.button4)
         button.setOnClickListener {
-            SignInActivity()
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
+
     }
 }
