@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 
 class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,6 +15,7 @@ class SignInActivity : AppCompatActivity() {
         button.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
+            Toast.makeText(this, "로그인 하셨습니다.", Toast.LENGTH_SHORT).show()
         }
 
 
@@ -21,6 +23,7 @@ class SignInActivity : AppCompatActivity() {
         button2.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
+            Toast.makeText(this, "회원가입한다.", Toast.LENGTH_SHORT).show()
         }
 
     }
