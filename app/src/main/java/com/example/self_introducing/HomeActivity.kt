@@ -14,7 +14,7 @@ class HomeActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.button4)
         button.setOnClickListener {
             finish()
-            Toast.makeText(this, "돌아갑니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "로그인 화면으로 돌아갑니다.", Toast.LENGTH_SHORT).show()
         }
 
     }
