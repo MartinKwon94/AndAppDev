@@ -24,12 +24,10 @@ class SignUpActivity : AppCompatActivity() {
 
             ) {
                 Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
-
                 finish()
             } else
                 Toast.makeText(this, "다시 입력해주세요.", Toast.LENGTH_SHORT).show()
         }
-
 
     }
 
