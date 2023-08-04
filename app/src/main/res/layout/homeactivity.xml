@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="아이디: kms001"
+        android:text=""
         android:textSize="20sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/textView7"

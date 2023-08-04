@@ -16,10 +16,13 @@ class SignInActivity : AppCompatActivity() {
 
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-            if (id != null || password != null) {
+            if (id.text.toString().isNotEmpty() && password.text.toString().isNotEmpty()) {
+
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("ID", id.text.toString())
                 Toast.makeText(this, "로그인!", Toast.LENGTH_SHORT).show()
+                startActivity(intent)
+
             } else
                 Toast.makeText(this, "다시 입력해주세요.", Toast.LENGTH_SHORT).show()
         }
