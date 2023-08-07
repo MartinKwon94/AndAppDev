@@ -28,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
 
         val logo = findViewById<ImageView>(R.id.imageView3)
 
-        val id = when ((1..6).random()){
+        val id = when ((1..5).random()){
             1 -> R.drawable.astronaut
             2 -> R.drawable.cheerup
             3 -> R.drawable.codinginthedream
