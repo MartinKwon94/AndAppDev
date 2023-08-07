@@ -12,6 +12,7 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signinactivity_main)
         val id = findViewById<EditText>(R.id.editTextTextEmailAddress)
+
         val password = findViewById<EditText>(R.id.editTextTextPassword)
 
         val button = findViewById<Button>(R.id.button)

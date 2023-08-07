@@ -13,9 +13,13 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupactivity)
         val intent = Intent(this, HomeActivity::class.java)
+
         val editTextTextEmailAddress2 = findViewById<EditText>(R.id.editTextTextEmailAddress2)
+
         val editTextTextPassword2 = findViewById<EditText>(R.id.editTextTextPassword2)
+
         val editTextText = findViewById<EditText>(R.id.editTextText)
+
         val button2 = findViewById<Button>(R.id.button3)
         button2.setOnClickListener {
             if (editTextTextEmailAddress2.text.toString()
