@@ -63,7 +63,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/button_pattern"
+        android:background="@drawable/button_machanism"
         android:text="종료"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
