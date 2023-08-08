@@ -11,7 +11,7 @@ import androidx.activity.result.ActivityResultLauncher
 
 class SignInActivity : AppCompatActivity() {
 
-    private lateinit var resultLauncher: ActivityResultLauncher<Intent>
+//    private lateinit var resultLauncher: ActivityResultLauncher<Intent>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signinactivity_main)
