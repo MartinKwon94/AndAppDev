@@ -37,3 +37,9 @@ class SignInActivity : AppCompatActivity() {
         }
     }
 }
+
+
+
+// @@@내일 해볼것 리스트@@@
+// 1. 회원가입한 정보로만 로그인 할 수 있게 만들기
+// 2. 버튼에 이미지 삽입하기
