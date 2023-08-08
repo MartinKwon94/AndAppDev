@@ -1,22 +1,30 @@
 package com.example.self_introducing
 
+import android.app.Instrumentation.ActivityResult
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
 
 class SignInActivity : AppCompatActivity() {
+
+    private lateinit var resultLauncher: ActivityResultLauncher<Intent>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signinactivity_main)
+
         val id = findViewById<EditText>(R.id.editTextTextEmailAddress)
 
         val password = findViewById<EditText>(R.id.editTextTextPassword)
 
         val button = findViewById<Button>(R.id.button)
+
         button.setOnClickListener {
+//            val intent = Intent(this, SignUpActivity::class.java)
+//            resultLauncher.launch(intent)
             if (id.text.toString().isNotEmpty() && password.text.toString().isNotEmpty()) {
 
                 val intent = Intent(this, HomeActivity::class.java)
