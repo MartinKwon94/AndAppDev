@@ -25,7 +25,8 @@ class SignInActivity : AppCompatActivity() {
         activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == RESULT_OK) {
                 val user_id = it.data?.getStringExtra("id") ?:""
-                val user_pw = it.data?.getStringExtra("pw") ?:""
+                val user_pw = it.data?.getStringExtra("password") ?:""
+                //다른데에선 password라고 해놓고 여기엔pw라고 해서 비밀번호는 입력값을 받지 못함 개멍청이
                 id.setText(user_id)
                 password.setText(user_pw)
             }
@@ -50,17 +51,14 @@ class SignInActivity : AppCompatActivity() {
         button2.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             activityResultLauncher.launch(intent)
-            startActivity(intent)
+//            startActivity(intent)
+//            이게 있어서 회원가입 화면이 두번이 뜸
             Toast.makeText(this, "회원가입을 진행합니다.", Toast.LENGTH_SHORT).show()
 
         }
 //            val intent = Intent(this, SignUpActivity::class.java)
-
     }
 }
 
 
 
-// @@@내일 해볼것 리스트@@@
-// 1. 회원가입한 정보로만 로그인 할 수 있게 만들기
-// 2. 버튼에 이미지 삽입하기

@@ -28,16 +28,16 @@ class SignUpActivity : AppCompatActivity() {
                 .putExtra("id", editTextTextEmailAddress2.text.toString())
                 .putExtra("password", editTextTextPassword2.text.toString())
 
-            setResult(RESULT_OK, intent)
 
             if (editTextTextEmailAddress2.text.toString()
                     .isNotEmpty() && editTextTextPassword2.text.toString()
                     .isNotEmpty() && editTextText.text.toString().isNotEmpty()
 
-
-            ) {
+            ) { setResult(RESULT_OK, intent)
+                //얘가 if문 바깥에 있어서 오류
                 Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
                 finish()
+
             } else
                 Toast.makeText(this, "다시 입력해주세요.", Toast.LENGTH_SHORT).show()
         }
