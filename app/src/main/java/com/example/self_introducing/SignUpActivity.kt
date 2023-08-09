@@ -13,7 +13,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupactivity)
 
-        val intent = Intent(this, HomeActivity::class.java)
+//        val intent = Intent(this, HomeActivity::class.java)
 
         val editTextTextEmailAddress2 = findViewById<EditText>(R.id.editTextTextEmailAddress2)
 
@@ -24,11 +24,11 @@ class SignUpActivity : AppCompatActivity() {
         val button2 = findViewById<Button>(R.id.button3)
         button2.setOnClickListener {
 
-//            val homeIntent = Intent(this, SignInActivity::class.java)
-//                .putExtra("id", editTextTextEmailAddress2.text.toString())
-//                .putExtra("password", editTextTextPassword2.text.toString())
-//
-//            setResult(RESULT_OK, homeIntent)
+            val intent = Intent(this, SignInActivity::class.java)
+                .putExtra("id", editTextTextEmailAddress2.text.toString())
+                .putExtra("password", editTextTextPassword2.text.toString())
+
+            setResult(RESULT_OK, intent)
 
             if (editTextTextEmailAddress2.text.toString()
                     .isNotEmpty() && editTextTextPassword2.text.toString()

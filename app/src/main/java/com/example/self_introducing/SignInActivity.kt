@@ -8,10 +8,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 
 class SignInActivity : AppCompatActivity() {
-
-//    private lateinit var resultLauncher: ActivityResultLauncher<Intent>
+    private lateinit var activityResultLauncher: ActivityResultLauncher<Intent>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signinactivity_main)
@@ -21,6 +21,15 @@ class SignInActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.editTextTextPassword)
 
         val button = findViewById<Button>(R.id.button)
+
+        activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == RESULT_OK) {
+                val user_id = it.data?.getStringExtra("id") ?:""
+                val user_pw = it.data?.getStringExtra("pw") ?:""
+                id.setText(user_id)
+                password.setText(user_pw)
+            }
+        }
 
         button.setOnClickListener {
 //            val intent = Intent(this, SignUpActivity::class.java)
@@ -40,9 +49,13 @@ class SignInActivity : AppCompatActivity() {
         val button2 = findViewById<Button>(R.id.button2)
         button2.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
+            activityResultLauncher.launch(intent)
             startActivity(intent)
             Toast.makeText(this, "회원가입을 진행합니다.", Toast.LENGTH_SHORT).show()
+
         }
+//            val intent = Intent(this, SignUpActivity::class.java)
+
     }
 }
 
