@@ -26,7 +26,7 @@ class SignInActivity : AppCompatActivity() {
             if (it.resultCode == RESULT_OK) {
                 val user_id = it.data?.getStringExtra("id") ?:""
                 val user_pw = it.data?.getStringExtra("password") ?:""
-                //다른데에선 password라고 해놓고 여기엔pw라고 해서 비밀번호는 입력값을 받지 못함 개멍청이
+                //다른데에선 password라고 해놓고 여기엔pw라고 해서 비밀번호는 입력값을 받지 못함
                 id.setText(user_id)
                 password.setText(user_pw)
             }
